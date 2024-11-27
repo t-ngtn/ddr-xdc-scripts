@@ -3,15 +3,6 @@ import sys
 from parse import Property, parse_lines, to_csv
 from fix_xdc import prop_to_xdc
 
-def create_net2pin(props: list[Property]) -> dict:
-    net2pin = {}
-    for p in props:
-        if p.net_name in net2pin:
-            net2pin[p.net_name].append(p.package_pin)
-        else:
-            net2pin[p.net_name] = [p.package_pin]
-    return net2pin
-
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print("Usage: python main.py correct_file master_file")
