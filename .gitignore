@@ -1,6 +1,13 @@
 # User
-data/
-out/
+data/*.xdc
+data/*.csv
+data/*.txt
+out/*.csv
+out/*.xdc
+out/*.txt
+out/*.log
+
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
